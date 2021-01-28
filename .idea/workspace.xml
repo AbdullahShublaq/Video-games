@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="decabb44-77e6-48ce-a279-c756cf8d02b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Video-games.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Video-games.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/most-anticipated.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/most-anticipated.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/popular-games.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/popular-games.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/recently-reviewed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/recently-reviewed.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -49,23 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Livewire/PopularGames.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-              <folding>
-                <element signature="e#37#55#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,12 +88,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/ComingSoon.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Livewire/PopularGames.php" />
         <option value="$PROJECT_DIR$/tailwind.config.js" />
-        <option value="$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/livewire/most-anticipated.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/popular-games.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/recently-reviewed.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Livewire/PopularGames.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/livewire/most-anticipated.blade.php" />
       </list>
     </option>
   </component>
@@ -344,12 +326,12 @@
       <workItem from="1611656651365" duration="569000" />
       <workItem from="1611657274651" duration="5289000" />
       <workItem from="1611762731912" duration="13967000" />
-      <workItem from="1611825917013" duration="1657000" />
+      <workItem from="1611825917013" duration="3707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28799000" />
+    <option name="totallyTimeSpent" value="30849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -530,17 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tailwind.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="639" column="12" selection-start-line="639" selection-start-column="12" selection-end-line="639" selection-end-column="12" />
-          <folding>
-            <element signature="e#114#14179#0" />
-            <element signature="e#14193#17647#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
@@ -555,31 +526,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/PopularGames.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="12">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#37#55#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/livewire/most-anticipated.blade.php">
+    <entry file="file://$PROJECT_DIR$/tailwind.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="12">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#141#646#0" />
+            <element signature="e#662#747#0" />
+            <element signature="e#761#3275#0" />
+            <element signature="e#3290#3682#0" />
+            <element signature="e#3805#4056#0" />
+            <element signature="e#4078#4153#0" />
+            <element signature="e#4182#4272#0" />
+            <element signature="e#4339#4475#0" />
+            <element signature="e#4494#4593#0" />
+            <element signature="e#4610#5222#0" />
+            <element signature="e#5590#5628#0" />
+            <element signature="e#5640#5739#0" />
+            <element signature="e#14726#18209#0" />
+            <element signature="e#18241#18329#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/livewire/popular-games.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="510">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/livewire/recently-reviewed.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+        <state relative-caret-position="271">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/livewire/most-anticipated.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -587,16 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Livewire/PopularGames.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="e#37#55#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
