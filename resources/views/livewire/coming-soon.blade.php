@@ -2,7 +2,7 @@
     @forelse($comingSoon as $game)
         <div class="most-anticipated-container space-y-10 mt-8">
             <div class="game flex">
-                <a href="#">
+                <a href="{{ route('games.show', $game['slug']) }}">
                     @if(array_key_exists('cover', $game))
                         <img src="{{ Str::replaceFirst('thumb', 'cover_small', $game['cover']['url']) }}" class="w-16 hover:opacity-75 transition ease-in-out duration-150" alt="Cover">
                     @else
@@ -10,7 +10,7 @@
                     @endif
                 </a>
                 <div class="ml-4">
-                    <a href="#" class="hover:text-gray-300">
+                    <a href="{{ route('games.show', $game['slug']) }}" class="hover:text-gray-300">
                         {{ $game['name'] }}
                     </a>
                     <div class="text-gray-400 text-sm mt-1">
