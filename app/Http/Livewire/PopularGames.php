@@ -47,7 +47,7 @@ class PopularGames extends Component
     {
         return collect($games)->map(function ($game){
             return collect($game)->merge([
-               'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : '/default.png',
+                'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : 'https://via.placeholder.com/264x352/2d3748/FFFFFF?text=N/A',
                 'rating' => isset($game['rating']) ? round($game['rating']).'%' : null,
                 'platforms' => collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
                     return $value != null && $key != null;
