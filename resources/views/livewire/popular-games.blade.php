@@ -3,19 +3,14 @@
         <div class="game mt-8">
             <div class="relative inline-block">
                 <a href="{{ route('games.show', $game['slug']) }}">
-                    @if(array_key_exists('cover', $game))
-                        <img src="{{ Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) }}"
-                             class="w-48 hover:opacity-75 transition ease-in-out duration-150" alt="Cover">
-                    @else
-                        <img src="/default.png" class="w-48 hover:opacity-75 transition ease-in-out duration-150"
-                             alt="Cover">
-                    @endif
+                    <img src="{{ $game['coverImageUrl'] }}"
+                         class="w-48 hover:opacity-75 transition ease-in-out duration-150" alt="Cover">
                 </a>
-                @if(isset($game['rating']))
+                @if($game['rating'])
                     <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800  rounded-full"
                          style="right: -20px; bottom:-20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
-                            {{ round($game['rating']).'%' }}
+                            {{ $game['rating'] }}
                         </div>
                     </div>
                 @endif
@@ -24,11 +19,7 @@
                 {{ $game['name'] }}
             </a>
             <div class="text-sm text-gray-400 mt-1">
-                @foreach($game['platforms'] as $platform)
-                    @if(array_key_exists('abbreviation', $platform))
-                        {{ $platform['abbreviation'] }},
-                    @endif
-                @endforeach
+                {{ $game['platforms'] }}
             </div>
         </div>
     @empty
