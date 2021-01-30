@@ -70,29 +70,32 @@ class GamesController extends Controller
     private function formatGameForView($game){
         return collect($game)->merge([
             'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : 'https://via.placeholder.com/264x352/2d3748/FFFFFF?text=N/A',
-            'genres' => collect($game['genres'])->pluck('name')->implode(', '),
-            'company' => $game['involved_companies'][0]['company']['name'],
-            'platforms' => collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
+            'genres' => array_key_exists('genres', $game) ? collect($game['genres'])->pluck('name')->implode(', ') : '',
+            'company' => array_key_exists('involved_companies', $game) ? $game['involved_companies'][0]['company']['name'] : NULL,
+            'platforms' => array_key_exists('platforms', $game) ? collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
                 return $value != null && $key != null;
-            })->implode(', '),
+            })->implode(', ') : collect([]),
             'member_rating' => array_key_exists('rating', $game) ? round($game['rating']).'%' : 'N/A',
             'critic_rating' => array_key_exists('aggregated_rating', $game) ? round($game['aggregated_rating']).'%' : 'N/A',
-            'trailer' => "https://youtube.com/watch/{$game['videos'][0]['video_id']}",
-            'screenshots' => collect($game['screenshots'])->map(function ($screenshot){
+            'trailer' => array_key_exists('videos', $game) ? "https://youtube.com/watch/{$game['videos'][0]['video_id']}" : null,
+            'screenshots' => array_key_exists('screenshots', $game) ? collect($game['screenshots'])->map(function ($screenshot){
                 return [
                     'big' => Str::replaceFirst('thumb', 'screenshot_big', $screenshot['url']),
                     'huge' => Str::replaceFirst('thumb', 'screenshot_huge', $screenshot['url'])
                 ];
-            })->take(9),
-            'similarGames' => collect($game['similar_games'])->map(function ($game) {
+            })->take(9): array([
+                'big' => 'https://via.placeholder.com/500x250/2d3748/FFFFFF?text=N/A',
+                'huge' => 'https://via.placeholder.com/1250x520/2d3748/FFFFFF?text=N/A'
+            ]),
+            'similarGames' => array_key_exists('similar_games', $game) ? collect($game['similar_games'])->map(function ($game) {
                return collect($game)->merge([
                    'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : 'https://via.placeholder.com/264x352/2d3748/FFFFFF?text=N/A',
                    'rating' => isset($game['rating']) ? round($game['rating']).'%' : null,
-                   'platforms' => collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
+                   'platforms' => array_key_exists('platforms', $game) ? collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
                        return $value != null && $key != null;
-                   })->implode(', ')
+                   })->implode(', ') : collect([])
                ]);
-            })->take(6),
+            })->take(6) : collect([]),
             'social' => [
                 'website' => collect($game['websites'])->first(),
                 'facebook' => collect($game['websites'])->filter(function ($website) {
