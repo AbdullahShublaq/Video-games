@@ -13,15 +13,17 @@
                     {{ $game['name'] }}
                 </h2>
                 <div class="text-gray-400">
-                    <span>
-                        {{ $game['genres'] }}
-                    </span>
-                    &middot;
-                    <span>{{ $game['company'] }}</span>
-                    &middot;
-                    <span>
-                        {{ $game['platforms'] }}
-                    </span>
+                    @if($game['genres'])
+                        <span>{{ $game['genres'] }}</span>
+                        &middot;
+                    @endif
+                    @if($game['company'])
+                        <span>{{ $game['company'] }}</span>
+                        &middot;
+                    @endif
+                    @if($game['platforms'])
+                        <span>{{ $game['platforms'] }}</span>
+                    @endif
                 </div>
                 <div class="flex flex-wrap items-center mt-8">
                     <div class="flex items-center">
@@ -80,7 +82,7 @@
                 </div>
 
                 <p class="mt-12">
-                    {{ $game['summary'] }}
+                    {{ @$game['summary'] }}
                 </p>
 
                 <div class="mt-12">

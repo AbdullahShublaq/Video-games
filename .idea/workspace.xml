@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="decabb44-77e6-48ce-a279-c756cf8d02b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ViewGameTest.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +77,6 @@
         <option value="$PROJECT_DIR$/resources/views/livewire/coming-soon.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/components/game-card-skeleton.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/popular-games.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/show.blade.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ViewGameTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/PupularGamesTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/PopularGames.php" />
@@ -91,6 +88,7 @@
         <option value="$PROJECT_DIR$/tests/Feature/MostAnticipatedTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ComingSoonTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Livewire/ComingSoon.php" />
+        <option value="$PROJECT_DIR$/resources/views/show.blade.php" />
       </list>
     </option>
   </component>
@@ -223,6 +221,24 @@
             <path>
               <item name="Video-games" type="b2602c69:ProjectViewProjectNode" />
               <item name="Video-games" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Video-games" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Video-games" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Video-games" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Video-games" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Video-games" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Video-games" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,17 +246,6 @@
               <item name="Video-games" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Video-games" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Video-games" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Video-games" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Video-games" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Feature" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -328,7 +333,8 @@
       <workItem from="1611825917013" duration="8345000" />
       <workItem from="1611930395063" duration="3272000" />
       <workItem from="1611934933070" duration="8368000" />
-      <workItem from="1611986307208" duration="6899000" />
+      <workItem from="1611986307208" duration="8833000" />
+      <workItem from="1612107315417" duration="847000" />
     </task>
     <servers />
   </component>
@@ -365,13 +371,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54026000" />
+    <option name="totallyTimeSpent" value="56807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28214827" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28668684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -386,7 +392,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.6992248" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.8604651" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.95348835" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -608,25 +614,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="98" column="28" selection-start-line="91" selection-start-column="24" selection-end-line="98" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GamesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="97" column="38" lean-forward="true" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ViewGameTest.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,6 +705,23 @@
             <element signature="e#33#68#0#PHP" expanded="true" />
             <element signature="e#329#371#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GamesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
