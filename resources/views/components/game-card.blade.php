@@ -5,11 +5,18 @@
                  class="w-48 hover:opacity-75 transition ease-in-out duration-150" alt="Cover">
         </a>
         @if($game['rating'])
-            <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800  rounded-full"
+            <div id="{{ $game['slug'] }}" class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full relative text-sm"
                  style="right: -20px; bottom:-20px">
-                <div class="font-semibold text-xs flex justify-center items-center h-full">
-                    {{ $game['rating'] }}
-                </div>
+                @push('scripts')
+                    @include('_rating', [
+                        'slug' => $game['slug'],
+                        'rating' => $game['rating'],
+                        'event' => NULL
+                    ])
+                @endpush
+                {{--<div class="font-semibold text-xs flex justify-center items-center h-full">--}}
+                    {{--{{ $game['rating'] }}--}}
+                {{--</div>--}}
             </div>
         @endif
     </div>

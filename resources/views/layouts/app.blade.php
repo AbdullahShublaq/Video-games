@@ -8,7 +8,7 @@
     <title>Laracasts Video Games</title>
     <link rel="stylesheet" href="/css/main.css">
     <livewire:styles>
-</head>
+        </head>
 <body class="bg-gray-900 text-white">
 <header class="border-b border-gray-800">
     <nav class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 py-6">
@@ -50,6 +50,10 @@
         Powered By <a href="#" class="underline hover:text-gray-400">IGDB API</a>
     </div>
 </footer>
+
 <livewire:scripts>
+<script src="/js/app.js"></script>
+@stack('scripts')
+
 </body>
 </html>

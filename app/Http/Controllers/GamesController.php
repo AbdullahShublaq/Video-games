@@ -75,8 +75,8 @@ class GamesController extends Controller
             'platforms' => array_key_exists('platforms', $game) ? collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
                 return $value != null && $key != null;
             })->implode(', ') : collect([]),
-            'member_rating' => array_key_exists('rating', $game) ? round($game['rating']).'%' : 'N/A',
-            'critic_rating' => array_key_exists('aggregated_rating', $game) ? round($game['aggregated_rating']).'%' : 'N/A',
+            'member_rating' => array_key_exists('rating', $game) ? round($game['rating']) : '0',
+            'critic_rating' => array_key_exists('aggregated_rating', $game) ? round($game['aggregated_rating']) : '0',
             'trailer' => array_key_exists('videos', $game) ? "https://youtube.com/watch/{$game['videos'][0]['video_id']}" : null,
             'screenshots' => array_key_exists('screenshots', $game) ? collect($game['screenshots'])->map(function ($screenshot){
                 return [
@@ -90,7 +90,7 @@ class GamesController extends Controller
             'similarGames' => array_key_exists('similar_games', $game) ? collect($game['similar_games'])->map(function ($game) {
                return collect($game)->merge([
                    'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : 'https://via.placeholder.com/264x352/2d3748/FFFFFF?text=N/A',
-                   'rating' => isset($game['rating']) ? round($game['rating']).'%' : null,
+                   'rating' => isset($game['rating']) ? round($game['rating']) : '0',
                    'platforms' => array_key_exists('platforms', $game) ? collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
                        return $value != null && $key != null;
                    })->implode(', ') : collect([])
