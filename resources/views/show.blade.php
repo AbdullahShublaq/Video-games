@@ -27,7 +27,7 @@
                 </div>
                 <div class="flex flex-wrap items-center mt-8">
                     <div class="flex items-center">
-                        <div id="memberRating" class="w-16 h-16 bg-gray-800 rounded-full relative text-sm">
+                        <div id="memberRating" class="w-16 h-16 bg-gray-800 rounded-full relative text-xs">
                             @push('scripts')
                                 @include('_rating', [
                                     'slug' => 'memberRating',

@@ -31,6 +31,16 @@ class RecentlyReviewed extends Component
             )->post('https://api.igdb.com/v4/games')->json();
 
         $this->recentlyReviewed = $this->formatForView($recentlyReviewedUnformatted);
+
+        collect($this->recentlyReviewed)->filter(function ($game){
+            return $game['rating'];
+        })->each(function ($game){
+            $this->emit('reviewGameWithRatingAdded', [
+                'slug' => 'review_'.$game['slug'],
+                'rating' => $game['rating'] / 100,
+                'event' => NULL
+            ]);
+        });
     }
 
     public function render()
@@ -43,10 +53,10 @@ class RecentlyReviewed extends Component
         return collect($games)->map(function ($game){
             return collect($game)->merge([
                 'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : '/default.png',
-                'rating' => isset($game['rating']) ? round($game['rating']).'%' : null,
-                'platforms' => collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
+                'rating' => isset($game['rating']) ? round($game['rating']) : '0',
+                'platforms' => array_key_exists('platforms', $game) ? collect($game['platforms'])->pluck('abbreviation')->filter(function ($key, $value){
                     return $value != null && $key != null;
-                })->implode(', ')
+                })->implode(', ') : collect([])
             ]);
         })->toArray();
     }

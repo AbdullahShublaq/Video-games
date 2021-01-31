@@ -1,6 +1,13 @@
 <script>
-    var container = document.getElementById('{{ $slug }}');
-    var bar = new ProgressBar.Circle(container, {
+    @if ($event) window.livewire.on('{{ $event }}', params => { @endif
+
+    @if ($event)
+        var progressBarContainer = document.getElementById(params.slug);
+    @else
+        var progressBarContainer = document.getElementById('{{ $slug }}');
+    @endif
+
+    var bar = new ProgressBar.Circle(progressBarContainer, {
         color: 'white',
         // This has to be the same size as the maximum width to
         // prevent clipping
@@ -27,5 +34,12 @@
             }
         }
     });
-    bar.animate({{ $rating / 100}} );
+
+    @if ($event)
+        bar.animate(params.rating);
+    @else
+        bar.animate({{ $rating / 100 }});
+    @endif
+
+    @if ($event) }) @endif
 </script>
