@@ -7,14 +7,14 @@
            @keydown.shift.tab = "isVisible = false"
            x-ref="search"
            @keydown.window="
-                if(event.keyCode == 191) {
+                if(event.keyCode == 191 || event.keyCode == 111) {
                     event.preventDefault();
                     $refs.search.focus();
                 }
             "
            type="text"
            class="bg-gray-800 text-sm rounded-full w-64 px-3 py-1 pl-8 focus:outline-none focus:shadow-outline"
-           placeholder="Search (Press '/' to focus)">
+           placeholder="Search ( Press ' / ' to focus )">
     <div class="absolute top-0 flex items-center h-full ml-2">
         <svg class="fill-current text-gray-400 w-4" viewBox="0 0 24 24">
             <path class="heroicon-ui"
