@@ -19,8 +19,9 @@ class ComingSoon extends Component
             ->withBody("
                 fields name, slug, cover.url, first_release_date, total_rating_count, platforms.abbreviation, rating, 
                         rating_count, summary;
-                where platforms = [48,49,130,6] & ( 
-                    first_release_date >= {$current} & total_rating_count > 5
+                where platforms = (48,49,130,6) 
+				& ( 
+                    first_release_date >= {$current}
                 );
                 sort first_release_date asc;
                 limit 4;

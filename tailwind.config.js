@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+      './app/**/*.php',
+      './resources/**/*.php',
+  ],
   target: 'relaxed',
   prefix: '',
   important: false,

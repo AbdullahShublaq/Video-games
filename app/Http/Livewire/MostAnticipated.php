@@ -13,16 +13,16 @@ class MostAnticipated extends Component
 
     function loadMostAnticipated()
     {
-        $afterFourMonths = Carbon::now()->addMonths(4)->timestamp;
+        $afterSixMonths = Carbon::now()->addMonths(6)->timestamp;
         $current = Carbon::now()->timestamp;
 
         $mostAnticipatedUnformatted = Http::withHeaders(config('services.igdb'))
             ->withBody("
                 fields name, slug, cover.url, first_release_date, total_rating_count, platforms.abbreviation, rating, rating_count, summary, slug;
-                    where platforms = [48,49,130,6]
+                    where platforms = (48,49,130,6) 
                     & (
                         first_release_date >= {$current}
-                        & first_release_date < {$afterFourMonths}
+                        & first_release_date < {$afterSixMonths}
                     );
                     sort total_rating_count desc;
                     limit 4;
